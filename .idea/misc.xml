@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/background_rounding.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/black_ladius.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/boxbtn.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/boxsize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/carticonsize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/custom_radius.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/exitbtnsize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/gobtnsize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/homesize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/kitchensize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/likebtn.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/likesize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/mysize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/searchsize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/shadow_test.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/shape.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/font/font.xml" value="0.2838541666666667" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/font/font_nanoom.xml" value="0.2838541666666667" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/activity_best_fragment.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/activity_re.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/activity_zero.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/custom_tab.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/first_banner_fragment.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_all.xml" value="0.1" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_best.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_first.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_mission.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_new.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_second.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_today.xml" value="0.25364583333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
