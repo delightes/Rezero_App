@@ -14,7 +14,7 @@
         android:id="@+id/text1"
         android:textColor="@color/black"
         android:gravity="center"
-        android:text="Best"/>
+        android:text="이 텍스트뷰는 지워도됌 화면보이나 확인용"/>
 
 
 

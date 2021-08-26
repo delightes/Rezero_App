@@ -49,6 +49,7 @@ public class BestFragment extends Fragment {
         }
     }
 
+    //은수화이팅ㅎ
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
