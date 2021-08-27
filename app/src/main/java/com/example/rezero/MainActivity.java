@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private Context mContext;
 
-    Button homeBtn,boxBtn,likeBtn,myBtn;
-    ImageButton btnOpenDrawer;
+    ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer;
 
 
     @Override
@@ -41,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         //Button btnCloseDrawer = (Button) findViewById(R.id.btn_CloseDrawer);
 
         //하단 버튼객체생성
-        homeBtn = (Button)findViewById(R.id.homeBtn);
-        boxBtn = (Button)findViewById(R.id.boxBtn);
-        likeBtn = (Button)findViewById(R.id.likeBtn);
-        myBtn = (Button)findViewById(R.id.myBtn);
+        homeBtn = (ImageButton)findViewById(R.id.homeBtn);
+        boxBtn = (ImageButton)findViewById(R.id.boxBtn);
+        likeBtn = (ImageButton)findViewById(R.id.likeBtn);
+        myBtn = (ImageButton)findViewById(R.id.myBtn);
 
 
         //메뉴바버튼이미지삽입

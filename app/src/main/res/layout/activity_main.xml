@@ -74,35 +74,40 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.5">
-            <Button
+            android:layout_weight="1.3">
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/homesize"
-                android:id="@+id/homeBtn"
-                android:layout_gravity="center"/>
-            <Button
+                android:src="@drawable/homeicon"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:id="@+id/homeBtn"/>
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/boxsize"
-                android:id="@+id/boxBtn"
-                android:layout_gravity="center"/>
-            <Button
+                android:src="@drawable/boxicon"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:id="@+id/boxBtn"/>
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/likesize"
-                android:id="@+id/likeBtn"
-                android:layout_gravity="center"/>
-            <Button
+                android:src="@drawable/likeicon"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:id="@+id/likeBtn"/>
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/mysize"
-                android:id="@+id/myBtn"
-                android:layout_gravity="center"/>
+                android:src="@drawable/usericon"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:id="@+id/myBtn"/>
+
         </LinearLayout>
     </LinearLayout>
 
