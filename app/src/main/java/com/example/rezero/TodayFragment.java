@@ -141,6 +141,7 @@ public class TodayFragment extends Fragment {
                 likeBtn.setLayoutParams(likeBtnParams);
                 likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+                //좋아요이벤트
                 likeBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
