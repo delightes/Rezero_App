@@ -145,12 +145,7 @@ public class TodayFragment extends Fragment {
                 likeBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        clickCount ++;
-                        if(clickCount%2==0){
-                            likeBtn.setImageResource(R.drawable.likebtn);
-                        }else{
-                            likeBtn.setImageResource(R.drawable.likebtn_push);
-                        }
+                        likeBtn.setImageResource(R.drawable.likebtn_push);
                     }
                 });
                 //좋아요버튼부착
