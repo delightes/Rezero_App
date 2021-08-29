@@ -10,8 +10,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -49,6 +53,10 @@ public class TodayFragment extends Fragment {
 
     TextView name,price;
 
+    // 세로줄수 - colum 가로줄수 - dataNum/colum
+    TableLayout table;
+    int colum=2;
+    int dataNum=20;
 
     private TodayFragment mViewModel;
 
@@ -90,7 +98,6 @@ public class TodayFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_today, container, false);
 
-        GridLayout gridLayout = (GridLayout) view.findViewById(R.id.gridLayout);
 
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.pagerBanner);
         CircleIndicator indicator = (CircleIndicator)view.findViewById(R.id.indicator);
@@ -99,17 +106,77 @@ public class TodayFragment extends Fragment {
         indicator.setViewPager(viewPager);
 
 
-        //이미지객체생성
-        for(int i=0;i<ImgLen;i++){
-            exImg[i] = new ImageView(this.getContext());//제품이미지객체생성
-            exImg[i].setImageResource(R.drawable.imgex);//이미지소스 넣기
-            exImg[i].setScaleType(ImageView.ScaleType.FIT_CENTER);
-            exImg[i].setBackground(getResources().getDrawable(R.drawable.shadow_test));
+        table = (TableLayout) view.findViewById(R.id.table); // 테이블 생성
+
+        //TableRow tableRow = new TableRow(this);
+        TableRow[] tableRow = new TableRow[dataNum/colum];
+        for (int i=0; i<dataNum/colum;i++){
+            tableRow[i] = new TableRow(getContext());
+            tableRow[i].setPadding(10,10,10,10);
+            tableRow[i].setLayoutParams(new TableRow.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
         }
 
-        //그리드레이아웃에 이미지부착 - 기본
-        for(int i=0;i< ImgLen;i++){
-            gridLayout.addView(exImg[i]);
+
+        RelativeLayout.LayoutParams likeBtnParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        for(int i = 0 ; i <(dataNum/colum) ; i++) {
+            for (int j=0;j<colum;j++){
+                //렐러티브레이아웃크기조정을위한 리니어
+                LinearLayout lilay= new LinearLayout(getContext());
+                lilay.setPadding(10,10,10,10);
+                lilay.setGravity(Gravity.CENTER);
+                lilay.setOrientation(LinearLayout.VERTICAL);
+                //제품이미지배경레이어
+                RelativeLayout ry = new RelativeLayout(getContext());
+                ry.setPadding(5,5,23,3);
+                ry.setLayoutParams(new RelativeLayout.LayoutParams(300,300));
+                // 여기에 사진백그라운드로부착
+                ry.setBackground(getResources().getDrawable(R.drawable.eximg));
+                ImageButton likeBtn = new ImageButton(getContext());
+                likeBtn.setImageResource(R.drawable.likebtn);
+                likeBtn.setBackgroundColor(Color.TRANSPARENT);
+                likeBtn.setLayoutParams(likeBtnParams);
+                likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+                likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+                /*likeBtn.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent event) {
+                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                            likeBtn.setImageResource(R.drawable.likebtn_push);
+
+                        } else if (event.getAction() == MotionEvent.ACTION_UP) {
+
+                            likeBtn.setImageResource(R.drawable.likebtn);
+                        }
+                        return false;
+                    }
+                });*/
+                likeBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        likeBtn.setImageResource(R.drawable.likebtn_push);
+                    }
+                });
+                //좋아요버튼부착
+                ry.addView(likeBtn);
+                //상품명이랑가격
+                TextView pName= new TextView(getContext());
+                pName.setText("상품명");
+                pName.setTextColor(Color.parseColor("#263959"));
+                pName.setGravity(Gravity.CENTER);
+                TextView pPrice= new TextView(getContext());
+                pPrice.setText("가격");
+                pPrice.setTextColor(Color.parseColor("#263959"));
+                pPrice.setGravity(Gravity.CENTER);
+                lilay.addView(ry);
+                lilay.addView(pName);
+                lilay.addView(pPrice);
+                tableRow[i].addView(lilay);
+            }
+        }
+        for(int i=0;i<dataNum/colum;i++){
+            table.addView(tableRow[i]);
         }
 
         return view;

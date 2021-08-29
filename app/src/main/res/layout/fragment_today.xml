@@ -35,15 +35,11 @@
             android:fontFamily="@font/nanumsquare"
             android:gravity="center"
             android:padding="5dp"/>
-        <GridLayout
+        <TableLayout
+            android:stretchColumns="*"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:rowCount="20"
-            android:columnCount="2"
-            android:id="@+id/gridLayout">
-
-        </GridLayout>
+            android:id="@+id/table"/>
 
 
 
