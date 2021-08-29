@@ -57,6 +57,8 @@ public class TodayFragment extends Fragment {
     TableLayout table;
     int colum=2;
     int dataNum=20;
+    //좋아요버튼을위한 클릭수
+    int clickCount=0;
 
     private TodayFragment mViewModel;
 
@@ -139,23 +141,15 @@ public class TodayFragment extends Fragment {
                 likeBtn.setLayoutParams(likeBtnParams);
                 likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-                /*likeBtn.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View view, MotionEvent event) {
-                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                            likeBtn.setImageResource(R.drawable.likebtn_push);
-
-                        } else if (event.getAction() == MotionEvent.ACTION_UP) {
-
-                            likeBtn.setImageResource(R.drawable.likebtn);
-                        }
-                        return false;
-                    }
-                });*/
                 likeBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        likeBtn.setImageResource(R.drawable.likebtn_push);
+                        clickCount ++;
+                        if(clickCount%2==0){
+                            likeBtn.setImageResource(R.drawable.likebtn);
+                        }else{
+                            likeBtn.setImageResource(R.drawable.likebtn_push);
+                        }
                     }
                 });
                 //좋아요버튼부착
