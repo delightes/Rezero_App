@@ -122,7 +122,8 @@
         android:gravity="center_horizontal"
         android:background="#ffffff"
         android:layout_gravity="start"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingRight="12mm">
 
         <TextView
             android:layout_width="match_parent"
@@ -251,6 +252,34 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:drawableRight="@drawable/gobtnsize"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bar"/>
+        <Button
+            android:id="@+id/designerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="디자이너"
+            android:background="#ffffff"
+            android:textColor="#6D819C"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="24dp"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+        <Button
+            android:id="@+id/mypageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="마이페이지"
+            android:background="#ffffff"
+            android:textColor="#6D819C"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="24dp"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
 <!--        <Button-->
 <!--            android:id="@+id/btn_CloseDrawer"-->
 <!--            android:layout_width="match_parent"-->
