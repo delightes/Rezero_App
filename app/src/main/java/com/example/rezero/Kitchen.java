@@ -24,7 +24,7 @@ public class Kitchen extends AppCompatActivity {
 
         mContext = getApplicationContext();
 
-        //
+        //탭레이아웃
         {mTabLayout = (TabLayout) findViewById(R.id.layout_tab);
 
             mTabLayout.addTab(mTabLayout.newTab().setCustomView(createTabView("상품")));
