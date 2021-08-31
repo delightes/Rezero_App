@@ -42,16 +42,17 @@ public class TodayFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    GridLayout gridLayout;
+    ViewPager pagerBanner;
+    CircleIndicator indicator;
+    LinearLayout basicLay;
 
 
     // 세로줄수 - colum 가로줄수 - dataNum/colum
     TableLayout table;
     int colum=2;
     int dataNum=20;
-    //좋아요버튼을위한 클릭수
-    int clickCount=0;
 
-    private TodayFragment mViewModel;
 
     public TodayFragment() {
         // Required empty public constructor
@@ -89,8 +90,10 @@ public class TodayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+
         View view = inflater.inflate(R.layout.fragment_today, container, false);
 
+//        GridLayout gridLayout = (GridLayout) view.findViewById(R.id.gridLayout);
 
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.pagerBanner);
         CircleIndicator indicator = (CircleIndicator)view.findViewById(R.id.indicator);
@@ -99,7 +102,8 @@ public class TodayFragment extends Fragment {
         indicator.setViewPager(viewPager);
 
 
-        table = (TableLayout) view.findViewById(R.id.table); // 테이블 생성
+        // 테이블 생성
+        table = (TableLayout) view.findViewById(R.id.table);
 
         //TableRow tableRow = new TableRow(this);
         TableRow[] tableRow = new TableRow[dataNum/colum];
@@ -122,7 +126,7 @@ public class TodayFragment extends Fragment {
                 lilay.setOrientation(LinearLayout.VERTICAL);
                 //제품이미지배경레이어
                 RelativeLayout ry = new RelativeLayout(getContext());
-                ry.setPadding(5,5,20,15);
+                ry.setPadding(5,5,20,10);
                 ry.setLayoutParams(new RelativeLayout.LayoutParams(300,300));
                 // 여기에 사진백그라운드로부착
                 ry.setBackground(getResources().getDrawable(R.drawable.eximg));
@@ -159,4 +163,3 @@ public class TodayFragment extends Fragment {
 
 
 }
-
