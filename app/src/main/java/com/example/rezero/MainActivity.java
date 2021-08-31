@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer;
 
+    //드로우바 메뉴의 버튼객체 선언
+    Button kitchenBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -175,6 +178,15 @@ public class MainActivity extends AppCompatActivity {
 //            });
           }
 
+        //드로우메뉴바의 버튼객체생성 및 눌럿을때 화면전환
+        kitchenBtn = (Button) findViewById(R.id.kitchenBtn);
+        kitchenBtn.setOnClickListener(new View.OnClickListener() {//주방으로 화면전환
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Kitchen.class);
+                startActivity(intent);
+            }
+        });
 
 
 

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".Kitchen"
+            android:exported="true" />
+        <activity
             android:name=".MissionFragment"
             android:exported="true" />
         <activity
