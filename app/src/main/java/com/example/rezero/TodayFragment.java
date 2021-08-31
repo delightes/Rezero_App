@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -135,19 +136,13 @@ public class TodayFragment extends Fragment {
                 ry.setLayoutParams(new RelativeLayout.LayoutParams(300,300));
                 // 여기에 사진백그라운드로부착
                 ry.setBackground(getResources().getDrawable(R.drawable.eximg));
-                ImageButton likeBtn = new ImageButton(getContext());
-                likeBtn.setImageResource(R.drawable.likebtn);
+                //좋이여버튼생성
+                CheckBox likeBtn = new CheckBox(getContext());
+                likeBtn.setButtonDrawable(R.drawable.custom_checkbox);
                 likeBtn.setBackgroundColor(Color.TRANSPARENT);
                 likeBtn.setLayoutParams(likeBtnParams);
                 likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-                //좋아요이벤트
-                likeBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        likeBtn.setImageResource(R.drawable.likebtn_push);
-                    }
-                });
                 //좋아요버튼부착
                 ry.addView(likeBtn);
                 //상품명이랑가격
