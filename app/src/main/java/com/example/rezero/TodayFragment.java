@@ -42,17 +42,7 @@ public class TodayFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    GridLayout gridLayout;
-    ViewPager pagerBanner;
-    CircleIndicator indicator;
 
-    int ImgLen = 10;
-
-    ImageView[] exImg = new ImageView[ImgLen];
-
-    LinearLayout[] basicBtn = new LinearLayout[ImgLen];
-
-    TextView name,price;
 
     // 세로줄수 - colum 가로줄수 - dataNum/colum
     TableLayout table;
@@ -132,7 +122,7 @@ public class TodayFragment extends Fragment {
                 lilay.setOrientation(LinearLayout.VERTICAL);
                 //제품이미지배경레이어
                 RelativeLayout ry = new RelativeLayout(getContext());
-                ry.setPadding(5,5,23,3);
+                ry.setPadding(5,5,20,15);
                 ry.setLayoutParams(new RelativeLayout.LayoutParams(300,300));
                 // 여기에 사진백그라운드로부착
                 ry.setBackground(getResources().getDrawable(R.drawable.eximg));
