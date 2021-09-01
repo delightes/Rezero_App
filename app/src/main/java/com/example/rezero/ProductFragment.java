@@ -7,12 +7,23 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ProductFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProductFragment extends Fragment {
+public class ProductFragment extends Fragment implements ExampleBottomSheetDialog.BottomSheetListener{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,10 +65,38 @@ public class ProductFragment extends Fragment {
         }
     }
 
+    private View view,view1;
+
+    LinearLayout sortBtn;
+    Button btnOK;
+
+    private LinearLayout btn_open_bt_sheet;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product, container, false);
+        view = inflater.inflate(R.layout.fragment_product, container, false);
+
+        btn_open_bt_sheet = (LinearLayout) view.findViewById(R.id.btn_open_bt_sheet);
+
+        btn_open_bt_sheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ExampleBottomSheetDialog bottomSheetDialog = new ExampleBottomSheetDialog();
+                bottomSheetDialog.show(getFragmentManager(), "exampleBottomSheet");
+
+            }
+        });
+
+        return view;
     }
+
+    // ExampleBottomSheetDialog 인터페이스 메소드
+    @Override
+    public void onButtonClicked(String text) {
+
+    }
+
 }

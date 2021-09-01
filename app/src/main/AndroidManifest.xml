@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".BottomSheet"
+            android:exported="true" />
+        <activity
             android:name=".Kitchen"
             android:exported="true" />
         <activity
