@@ -53,7 +53,7 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
                 }
             });
             return view;
-        }else if(ProductFragment.selectedBtnId== R.id.priceSortBtn){
+        }else if(ProductFragment.selectedBtnId== R.id.priceSortBtn){//쉬발
             view = inflater.inflate(R.layout.pricesort_btn_bottom_sheet, container, false);
             okPricesort = view.findViewById(R.id.okPricesort);
             okPricesort.setOnClickListener(new View.OnClickListener() {
