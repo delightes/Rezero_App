@@ -22,7 +22,7 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
     // 인터페이스 변수
     private BottomSheetListener mListener;
     // 바텀시트 숨기기 버튼
-    private Button btn_hide_bt_sheet,okCategory;
+    private Button btn_hide_bt_sheet,okCategory,okPricesort;
 
 
     @Nullable
@@ -53,10 +53,17 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
                 }
             });
             return view;
+        }else if(ProductFragment.selectedBtnId== R.id.priceSortBtn){
+            view = inflater.inflate(R.layout.pricesort_btn_bottom_sheet, container, false);
+            okPricesort = view.findViewById(R.id.okPricesort);
+            okPricesort.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dismiss();
+                }
+            });
+            return view;
         }
-
-
-
 
         return inflater.inflate(R.layout.fragment_product, container, false);//프로덕트프래그먼트에서 제대로 정보못받앗을때
     }

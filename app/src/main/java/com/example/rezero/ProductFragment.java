@@ -67,7 +67,7 @@ public class ProductFragment extends Fragment implements SortBtnBottomSheetDialo
 
     Button btnOK;
 
-    private LinearLayout sortBtn,categoryBtn;
+    private LinearLayout sortBtn,categoryBtn,priceSortBtn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -79,6 +79,7 @@ public class ProductFragment extends Fragment implements SortBtnBottomSheetDialo
 
         sortBtn = (LinearLayout) view.findViewById(R.id.sortBtn);
         categoryBtn = (LinearLayout) view.findViewById(R.id.categoryBtn);
+        priceSortBtn=(LinearLayout)view.findViewById(R.id.priceSortBtn);
 
         sortBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +96,16 @@ public class ProductFragment extends Fragment implements SortBtnBottomSheetDialo
             public void onClick(View v) {
 
                 ProductFragment.selectedBtnId=R.id.categoryBtn;
+                SortBtnBottomSheetDialog bottomSheetDialog = new SortBtnBottomSheetDialog();
+                bottomSheetDialog.show(getFragmentManager(), "exampleBottomSheet");
+
+            }
+        });
+        priceSortBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ProductFragment.selectedBtnId=R.id.priceSortBtn;
                 SortBtnBottomSheetDialog bottomSheetDialog = new SortBtnBottomSheetDialog();
                 bottomSheetDialog.show(getFragmentManager(), "exampleBottomSheet");
 
