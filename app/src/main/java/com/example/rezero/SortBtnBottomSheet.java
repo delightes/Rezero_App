@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class BottomSheet extends AppCompatActivity {
+public class SortBtnBottomSheet extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bottom_sheet);
+        setContentView(R.layout.sort_btn_bottom_sheet);
     }
 }

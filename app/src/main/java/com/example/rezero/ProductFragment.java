@@ -1,5 +1,6 @@
 package com.example.rezero;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,13 +8,6 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -23,7 +17,7 @@ import android.widget.LinearLayout;
  * Use the {@link ProductFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProductFragment extends Fragment implements ExampleBottomSheetDialog.BottomSheetListener{
+public class ProductFragment extends Fragment implements SortBtnBottomSheetDialog.BottomSheetListener{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,24 +61,41 @@ public class ProductFragment extends Fragment implements ExampleBottomSheetDialo
 
     private View view,view1;
 
-    LinearLayout sortBtn;
+    public static int selectedBtnId=0;
+
+    static Context context;
+
     Button btnOK;
 
-    private LinearLayout btn_open_bt_sheet;
+    private LinearLayout sortBtn,categoryBtn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        this.context = getContext();
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_product, container, false);
 
-        btn_open_bt_sheet = (LinearLayout) view.findViewById(R.id.btn_open_bt_sheet);
 
-        btn_open_bt_sheet.setOnClickListener(new View.OnClickListener() {
+        sortBtn = (LinearLayout) view.findViewById(R.id.sortBtn);
+        categoryBtn = (LinearLayout) view.findViewById(R.id.categoryBtn);
+
+        sortBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                ExampleBottomSheetDialog bottomSheetDialog = new ExampleBottomSheetDialog();
+                ProductFragment.selectedBtnId=R.id.sortBtn;
+                SortBtnBottomSheetDialog bottomSheetDialog = new SortBtnBottomSheetDialog();
+                bottomSheetDialog.show(getFragmentManager(), "exampleBottomSheet");
+
+            }
+        });
+        categoryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ProductFragment.selectedBtnId=R.id.categoryBtn;
+                SortBtnBottomSheetDialog bottomSheetDialog = new SortBtnBottomSheetDialog();
                 bottomSheetDialog.show(getFragmentManager(), "exampleBottomSheet");
 
             }
@@ -93,7 +104,7 @@ public class ProductFragment extends Fragment implements ExampleBottomSheetDialo
         return view;
     }
 
-    // ExampleBottomSheetDialog 인터페이스 메소드
+    // SortBtnBottomSheetDialog 인터페이스 메소드
     @Override
     public void onButtonClicked(String text) {
 

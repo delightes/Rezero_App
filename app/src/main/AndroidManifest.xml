@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".BottomSheet"
+            android:name=".CategoryBtnBottomSheet"
+            android:exported="true" />
+        <activity
+            android:name=".SortBtnBottomSheet"
             android:exported="true" />
         <activity
             android:name=".Kitchen"
