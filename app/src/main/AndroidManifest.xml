@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".product_select"
+            android:exported="true" />
+        <activity
             android:name=".PricesortBtnBottomSheet"
             android:exported="true" />
         <activity
